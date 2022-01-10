@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <script src="../static/js/singup.js" defer=""></script>
+
+    <title>디스 이즈 타이틀</title>
+
+    <style>
+        .wrapper{
+            width: 400px;
+            margin: auto;
+            border: solid black;
+        }
+
+        .spanName{
+            width: 100px;
+            border: solid red;
+        }
+    </style>
+
+</head>
+    <div class="wrapper">
+        <form action="/signupCheck" method="POST">
+            <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
+
+            <div class="email">
+                <span class="spanName">id : </span>
+                <input id="email" type="text" name="email_give" placeholder="이메일을 입력해 주세요.">
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="name">
+                <input id="name" type="text" name="name_give" placeholder="이름을 입력해 주세요.">
+                <div id="nameError" class="error"></div>
+            </div>
+
+            <div class="password">
+                <span class="spanName">pw : </span>
+                <input id="password" type="password" placeholder="비밀번호를 입력해 주세요.">
+                <div id="passwordError" class="error"></div>
+            </div>
+
+            <div class="passwordCheck">
+                <span class="spanName">pw 확인 : </span>
+                <input id="passwordCheck" type="password" placeholder="비밀번호를 다시 입력해 주세요.">
+                <div id="passwordCheckError" class="error"></div>
+            </div>
+
+            <div class="area">
+                <select id="area">
+                    <option selected disabled>지역을 선택하세요.</option>
+                    <option>서울</option>
+                    <option>인천</option>
+                    <option>경기</option>
+                </select>
+                <div id="areaError" class="error"></div>
+            </div>
+
+            <div class="gender">
+                <input id="gender_man" type="radio" name="gender">남성
+                <input id="gender_woman" type="radio" name="gender">여성
+                <div id="genderError" class="error"></div>
+            </div>
+            <div class="line">
+                <hr>
+            </div>
+            <div class="signUp">
+<!--                <button id="signUpButton" onclick="signUpCheck()">가입하기</button>-->
+                <button type="submit" class="btn btn-primary">가입ㄱ</button>
+            </div>
+        </form>
+
+    </div>
+<body>
+
+</body>
+</html>
